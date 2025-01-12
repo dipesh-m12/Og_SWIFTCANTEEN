@@ -46,15 +46,77 @@
       margin: 20px 0;
     }
   </style>
+  <script>
+    const creditInput = document.getElementById('creditAmount');
+    const summaryCredit = document.getElementById('summaryCredit');
+    const summaryTotal = document.getElementById('summaryTotal');
+  
+    creditInput.addEventListener('input', () => {
+      const amount = parseInt(creditInput.value) || 0;
+      summaryCredit.textContent = amount;
+      summaryTotal.textContent = amount; // Modify this if fees are applicable
+    });
+  </script>
 </head>
 
 <body>
-  <h2 style="text-align: right;">MES PILLAI CANTEEN</h2>
-  <h2 style="text-align: right;">Mahatma Education Society</h2>
+  <h2 style="text-align: right;">DIPESH KRISHNA KUMAR MISHRA</h2>
+  
   <h1>SwiftCanteen</h1>
   <a id="downloadBtn">Download APK</a>
 
+  
+
   <div class="container">
+    <section id="add-credits" style="
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    ">
+  <h2>Add Credits</h2>
+
+  <p>
+    Add credits to your SwiftCanteen account to make quick and easy transactions within the app.
+  </p>
+
+  <form id="addCreditsForm" action="/payment-gateway-url" method="POST">
+    <label for="creditAmount" style="font-size: 18px; display: block; margin-bottom: 10px;">Enter Credit Amount (₹):</label>
+    <input
+      type="number"
+      id="creditAmount"
+      name="creditAmount"
+      min="50"
+      step="50"
+      required
+      placeholder="e.g., 500"
+      style="padding: 10px; font-size: 16px; width: 100%; margin-bottom: 20px;"
+    />
+
+    <div id="summaryBox" style="
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          padding: 10px;
+          margin-bottom: 20px;
+          font-size: 16px;
+        ">
+      <p><strong>Credit Amount:</strong> ₹<span id="summaryCredit">0</span></p>
+      <p><strong>Total Payable:</strong> ₹<span id="summaryTotal">0</span></p>
+    </div>
+
+    <button type="submit" style="
+          background-color: #007bff;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+        ">
+      Proceed to Payment
+    </button>
+  </form>
+</section>
     <div class="section">
       <h2>About Us</h2>
       <p>
@@ -79,8 +141,8 @@
         For inquiries or feedback, please reach out to us at:
       </p>
       <ul>
-        <li>Email: krishna@mes.ac.in</li>
-        <!-- <li>Email: krishna@mes.ac.in</li> -->
+        <li>Email: mavinash422@gmail.com</li>
+        <!-- <li>Email: mavinash422@gmail.com</li> -->
         <!-- <li>Email: mdipesh2626@gmail.com</li> -->
       </ul>
       <p>
@@ -125,11 +187,11 @@
 
       <h3>1. Introduction</h3>
       <p>
-        Welcome to <strong>PANVEL CAMPUS CANTEEN</strong>. These Terms
+        Welcome to <strong>SWIFTCANTEEN</strong>. These Terms
         of Service ("Terms") govern your use of our services, and by using
         them, you agree to comply with these Terms. If you do not agree,
         please refrain from using our services. For any queries, contact us at
-        <a>krishna@mes.ac.in</a>.
+        <a>mavinash422@gmail.com</a>.
       </p>
 
       <h3>2. Eligibility</h3>
@@ -198,7 +260,7 @@
       <p>
         All content, trademarks, and intellectual property available through
         our services are the property of
-        <strong>PANVEL CAMPUS CANTEEN</strong> or its licensors. You may
+        <strong>SwiftCanteen</strong> or its licensors. You may
         not use, reproduce, or distribute any content without express
         permission from us.
       </p>
@@ -226,7 +288,7 @@
 
       <p>
         For any questions or concerns, please contact us at
-        <a href="mailto:krishna@mes.ac.in">krishna@mes.ac.in</a>.
+        <a href="mailto:mavinash422@gmail.com">mavinash422@gmail.com</a>.
       </p>
     </section>
 
@@ -274,7 +336,7 @@
         If after you opt-in, you change your mind, you may withdraw your
         consent for us to contact you, for the continued collection, use, or
         disclosure of your information at any time, by contacting us at
-        <a>krishna@mes.ac.in</a> or mailing us at: D33, 1/2 IT Colony, CBD
+        <a>mavinash422@gmail.com</a> or mailing us at: D33, 1/2 IT Colony, CBD
         Belapur, Navi Mumbai 400614.
       </p>
 
@@ -372,7 +434,7 @@
         If you would like to access, correct, amend, or delete any personal
         information we have about you, register a complaint, or simply want
         more information, contact our Privacy Compliance Officer at
-        <a>krishna@mes.ac.in</a> or by mail at:
+        <a>mavinash422@gmail.com</a> or by mail at:
       </p>
       <p>
         <strong>Privacy Compliance Officer</strong><br />
@@ -442,7 +504,7 @@
       <h3>In-App Support</h3>
       <p>
         If you have any questions or need assistance with your order, please
-        reach out to us at krishna@mes.ac.in.
+        reach out to us at mavinash422@gmail.com.
       </p>
     </section>
 
@@ -513,7 +575,7 @@
         <h3>Contact Us</h3>
         <p>
           If you are a canteen and would like to be listed in our app or need
-          assistance, please contact us at krishna@mes.ac.in
+          assistance, please contact us at mavinash422@gmail.com
         </p>
       </section> -->
 
@@ -525,7 +587,7 @@
       </p>
       <ul>
         <li><strong>Phone:</strong> +91 9321440314</li>
-        <li><strong>Email:</strong>krishna@mes.ac.in</li>
+        <li><strong>Email:</strong>mavinash422@gmail.com</li>
         <li>
           <strong>Operating Address:</strong>D:33,1/2,IT Colony,CBd
           Belapur,Navi Mumbai,400614
